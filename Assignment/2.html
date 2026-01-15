@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            border: 2px solid black;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            cursor: pointer;
+            
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            color: white;
+           
+        }
+        #child{
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div>
+            <a>Home</a>
+        </div>
+        <div id="child">
+            <a>Contact</a>
+            <a>Public</a>
+            <a>About</a>
+        </div>
+        <div>
+            <a>
+                <button>log out</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
