@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balloon Fixed</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    background: linear-gradient(rgb(88, 88, 236), white);
+}
+
+/* Heading */
+.logo{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.sun{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: linear-gradient(orange,pink);
+    position: absolute;
+    right: 20px;
+    animation-name: moon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+     /* animation-direction: alternate; */
+
+}
+@keyframes moon{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+/* Ground */
+.bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 150px;
+    background-color: rgb(79, 216, 79);
+}
+
+/* Balloon container */
+.balloon{
+    position: absolute;
+    bottom: -70px;
+    /* animation: fly 6s linear infinite; */
+    animation-duration: 7s;
+    animation-name: fly;
+    animation-iteration-count: infinite;
+}
+
+/* Balloon shape */
+.circle{
+    height: 120px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* String */
+.line{
+    height: 50px;
+    width: 2px;
+    background-color: black;
+    margin: auto;
+}
+
+/* Position + timing */
+.b1{ left: 10%; animation-delay: 0s; }
+.b2{ left: 25%; animation-delay: 1s; }
+.b3{ left: 40%; animation-delay: 2s; }
+.b4{ left: 55%; animation-delay: 3s; }
+.b5{ left: 70%; animation-delay: 1.5s; }
+.b6{ left: 85%; animation-delay: 2.5s; }
+
+/* 🎨 Balloon colors (IMPORTANT FIX) */
+.b1 .circle{ background:red; }
+.b2 .circle{ background:yellow; }
+.b3 .circle{ background:aqua; }
+.b4 .circle{ background:pink; }
+.b5 .circle{ background:orange; }
+.b6 .circle{ background:violet; }
+
+/* Animation */
+@keyframes fly{
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+   /* 25%{
+    transform: translatey(-200px);
+   }
+   50%{
+    transform: translateX(1000px);
+   } */
+    100%{
+        transform: translateY(-800px) rotate(10deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">
+    <h2>Welcome to Balloon Festival</h2>
+</div>
+
+<!-- Balloons -->
+<div class="balloon b1">
+    <div class="circle"></div>
+    <div class="line"></div>
+</div>
+<div class="balloon b2"><div class="circle"></div><div class="line"></div></div>
+<div class="balloon b3"><div class="circle"></div><div class="line"></div></div>
+<div class="balloon b4"><div class="circle"></div><div class="line"></div></div>
+<div class="balloon b5"><div class="circle"></div><div class="line"></div></div>
+<div class="balloon b6"><div class="circle"></div><div class="line"></div></div>
+
+<div class="sun"></div>
+
+<div class="bottom"></div>
+
+</body>
+</html>
